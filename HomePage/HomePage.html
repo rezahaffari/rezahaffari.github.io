@@ -1,4 +1,13 @@
-<?php include("header.htm"); ?>
+
+<div id="includedContent1"></div>
+
+<script>
+    fetch('header.htm')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('includedContent1').innerHTML = data;
+    });
+</script>
 
 <h5>Positions</h5>
 <ul>
@@ -74,6 +83,15 @@ Department of Data Sciece and AI</a>, <a class="urllink" href="http://www.monash
 </ul>
 </div>
 
+<div id="includedContent2"></div>
+
+<script>
+    fetch('footer.htm')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('includedContent2').innerHTML = data;
+    });
+</script>
 
 <?php include("footer.htm"); ?>
 
